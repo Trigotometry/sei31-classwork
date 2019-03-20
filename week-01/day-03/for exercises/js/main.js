@@ -32,3 +32,37 @@ for (var i = 1; i <= 10; i += 1) {
     console.log(`${ i } * ${ j } = ${ i * 9 }`);
   }
 }
+
+
+/*
+The Grade Assigner
+Check the results of assignGrade function from the conditionals exercise for every value from 60 to 100 - so your log should show "For 89, you got a B. For 90, you got an A.", etc.
+*/
+
+const assignGrade = function(score) {
+  let string = ''
+  if (score >= 90 && score <= 100) {
+    string += 'A';
+  };
+  if (score >= 80 && score < 90) {
+    string += 'B';
+  };
+  if (score >= 70 && score < 80) {
+    string += 'C'
+  };
+  if (score >= 60 && score < 70) {
+    string += 'D'
+  };
+  if (score >= 50 && score <60) {
+    string += 'F'
+  };
+  return string;
+};
+
+for (var score = 50; score <= 100 ; score += 1) {
+  console.log(`For ${ score }, you got a grade of ${ assignGrade(score) }.`);
+};
+  // function called
+console.log(assignGrade(90));
+console.log(assignGrade(75));
+console.log(assignGrade(50));
