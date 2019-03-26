@@ -1,0 +1,72 @@
+* {
+	/* border: 1px solid lime; */
+}
+
+body {
+	margin: 0;
+
+	padding: 0;
+
+	background-color: #222;
+}
+
+.container {
+	margin: 0 auto;
+
+	padding: 2em;
+
+	max-width: 960px;
+
+	border-radius: 0 0 1em 1em;
+
+	background-color: #ccc;
+}
+
+nav {
+	text-align: right;
+}
+
+nav a {
+	color: green;
+
+	text-decoration: none;
+}
+h1 {
+	padding: 1em;
+
+	background-color: #222;
+
+	color: #ccc;
+
+	text-align: center;
+}
+
+main {
+	display: inline-block;
+
+	width: 75%;
+}
+
+main img {
+	display: block;
+
+	margin: 0 auto;
+}
+
+aside {
+	display: inline-block;
+
+	padding: 1em;
+
+	width: 21%;
+
+	border-radius: 0.5em;
+
+	background-color: #cdc;
+
+	vertical-align: top;
+}
+
+aside ul {
+	padding-left: 1em;
+}
