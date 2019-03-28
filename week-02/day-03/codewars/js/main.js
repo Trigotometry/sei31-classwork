@@ -1,16 +1,13 @@
 const squareDigits = function( num ) {
 
-	// setup an empty array to pass in split characters
-	let splitInputString = [];
+	let inputString = num.toString().split( '' );
 
-	// convert input number to a string and then split the argument given at each character
-	let strNum = num.toString().split( '' );
+	const squaredNumberArray = [];
 
-	splitInputString.push( strNum );
-
-	for ( let i = 0; i < splitInputString.length; i += 1 ) {
-		console.log( Number( splitInputString[ i ] ) );
+	for ( let i = 0; i < inputString.length; i += 1 ) {
+		squaredNumberArray.push(Number( inputString[ i ] ) * Number( inputString[ i ] ) );
 	};
-};
 
-squareDigits( 9229 );
+	return Number(squaredNumberArray.join(''))
+
+};

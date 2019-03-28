@@ -33,26 +33,27 @@
 ////////////////////////////////////////////////////////////////////////////////
 // tom jQuery
 
-const $links = $( 'li a' );
-
-const thumbnailify = function ( $a ) {
-	const url = $a.attr( 'href' );
-	const thumbnailURL = youtube.generateThumbnailUrl( url );
-	const $thumbnail = $( '<img>' ).attr( 'src', thumbnailURL );
-	$a.append( $thumbnail );
-
-	$thumbnail.on('click', function (event) {
-		preventDefault();
-	});
-};
-
-for ( let i = 0; i < $links.length; i += 1 ) {
-	const $link = $( $links[ i ] ); // turns the vanilla DOM node backinto a jQuery node.
-	thumbnailify( $link );
-}
+// const $links = $( 'li a' );
+//
+// const thumbnailify = function ( $a ) {
+// 	const url = $a.attr( 'href' );
+// 	const thumbnailURL = youtube.generateThumbnailUrl( url );
+// 	const $thumbnail = $( '<img>' ).attr( 'src', thumbnailURL );
+// 	$a.append( $thumbnail );
+//
+// 	$thumbnail.on('click', function (event) {
+// 		preventDefault();
+// 	});
+// };
+//
+// for ( let i = 0; i < $links.length; i += 1 ) {
+// 	const $link = $( $links[ i ] ); // turns the vanilla DOM node backinto a jQuery node.
+// 	thumbnailify( $link );
+// }
 
 ////////////////////////////////////////////////////////////////////////////////
+// tom playing around
 
-const divA = document.createElement('div');
-
-divA.innerHTML('hi.');
+const $list = $('li');
+const $item2 = $list.eq(1);
+$item2.FadeOut(200);
