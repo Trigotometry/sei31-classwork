@@ -33,27 +33,30 @@
 ////////////////////////////////////////////////////////////////////////////////
 // tom jQuery
 
-// const $links = $( 'li a' );
-//
-// const thumbnailify = function ( $a ) {
-// 	const url = $a.attr( 'href' );
-// 	const thumbnailURL = youtube.generateThumbnailUrl( url );
-// 	const $thumbnail = $( '<img>' ).attr( 'src', thumbnailURL );
-// 	$a.append( $thumbnail );
-//
-// 	$thumbnail.on('click', function (event) {
-// 		preventDefault();
-// 	});
-// };
-//
-// for ( let i = 0; i < $links.length; i += 1 ) {
-// 	const $link = $( $links[ i ] ); // turns the vanilla DOM node backinto a jQuery node.
-// 	thumbnailify( $link );
-// }
+const $links = $( 'li a' );
+
+const thumbnailify = function ( $a ) {
+	const url = $a.attr( 'href' );
+	const thumbnailURL = youtube.generateThumbnailUrl( url );
+	const $thumbnail = $( '<img>' ).attr( 'src', thumbnailURL );
+	$a.append( $thumbnail );
+
+	$thumbnail.on('click', function (event) {
+		preventDefault();
+	});
+};
+
+for ( let i = 0; i < $links.length; i += 1 ) {
+	const $link = $( $links[ i ] ); // turns the vanilla DOM node backinto a jQuery node.
+	thumbnailify( $link );
+}
+
+$('h2').funText(500, 'candy');
+$('a').funText(200, 'reverseCandy');
 
 ////////////////////////////////////////////////////////////////////////////////
 // tom playing around
-
-const $list = $('li');
-const $item2 = $list.eq(1);
-$item2.FadeOut(200);
+//
+// const $list = $('li');
+// const $item2 = $list.eq(1);
+// $item2.FadeOut(200);
