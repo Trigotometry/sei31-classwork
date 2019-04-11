@@ -8,4 +8,3 @@ CREATE TABLE butterflies (
 -- seed data
 
 INSERT INTO butterflies (name, family) VALUES ('Monarch', 'Nymphalidae');
-INSERT INTO butterflies (name, family) VALUES ('Test', 'Pretty');
