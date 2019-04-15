@@ -19,16 +19,15 @@ require 'pry'
 def hamming_difference strand1, strand2
 
 	strand1.upcase
-	strand1_a = strand1.split('')
-	strand2_a = strand2.split('')
+	p strand1
+
 	wrong_characters = []
 
-p strand1_a
-	strand1_a.each_with_index do |char, index|
+	strand1.chars.each_with_index do |char, index|
 		# p strand1_a[i]
 		# binding.pry
-		unless strand1_a[index] == strand2_a[index]
-			wrong_characters << strand2_a[index]
+		unless strand1[index] == strand2[index]
+			wrong_characters << strand2[index]
 		end
 	end
 

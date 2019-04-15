@@ -17,7 +17,6 @@ class Stooge < Actor
 end
 
 class MarxBrother < Actor
-	# macro
 	# attr_reader :name
 	# attr_writer :name
 	# read & write
@@ -33,14 +32,6 @@ class MarxBrother < Actor
 		"My name is #{ @name } and I play the #{ @instrument }."
 	end
 
-	#getter
-	# def vice()
-	# 	@vice
-	# end
-	# #setter
-	# def vice=(v)
-	# 	@vice = v
-	# end
 end
 
 groucho = MarxBrother.new 'Grouch Marx', 'guitar', 'cigar'
