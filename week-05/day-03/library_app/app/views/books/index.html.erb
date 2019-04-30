@@ -1,0 +1,10 @@
+<h1>All books.</h1>
+
+<% @books.each do |book| %>
+	<p>Title:
+		<%= link_to book.title, book_path( book.id ) %></p>
+	<p>Genre:
+		<%= book.genre %></p>
+	<p>Word Count:
+		<%= book.word_count %></p>
+<% end %>

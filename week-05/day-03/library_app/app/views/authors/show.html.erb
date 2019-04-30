@@ -1,0 +1,19 @@
+<h1><%= @author.name %></h1>
+
+<p>
+	<%= @author.name %>is a <% unless @age.nil? %><%= @age %> year old <% end %> <%= @author.nationality %>	author who has a very influential body of work.
+</p>
+
+<h5>His works include (but are not limited too)</h5>
+<%# @author.books do |book| %>
+<ul>
+	<li><%# book.name %></li>
+</ul>
+<%# end %>
+
+<%= image_tag @author.image %>
+
+<div class="controls">
+<%= link_to "Edit Author", edit_author_path( @author.id ) %>
+<%= link_to "Delete Author", author_path( @author.id ), :method => 'delete' %>
+</div>

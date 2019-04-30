@@ -1,0 +1,21 @@
+<h1><%= @planet["name"] %></h1>
+
+<%= image_tage @planet.image, :class => 'feature' if @planet.image.present? %>
+
+<ul>
+	<li>Name:
+		<%= @planet["name"] %></li>
+	<li>Orbit:
+		<%= @planet["orbit"] %></li>
+	<li>Diameter:
+		<%= @planet["diameter"] %></li>
+	<li>Mass:
+		<%= @planet["mass"] %></li>
+	<li>Moons:
+		<%= @planet["moon"] %></li>
+</ul>
+
+<div class="controls">
+	<%= link_to "Edit Planet", edit_planet_path(@planet.id) %>
+	<%= button_to "Delete Planet", planet_path(@planet.id), :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+</div>

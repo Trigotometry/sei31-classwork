@@ -1,0 +1,258 @@
+Started GET "/" for ::1 at 2019-04-17 21:20:47 +1000
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateArtists (20190416041534)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "dob" date, "period" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190416041534_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190416041534"]]
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateWorks (20190417015510)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "works" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "year" text, "medium" text, "style" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190417015510_create_works.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190417015510"]]
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddArtistIdToWorks (20190417041129)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "works" ADD "artist_id" integer[0m
+  ↳ db/migrate/20190417041129_add_artist_id_to_works.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190417041129"]]
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-17 11:21:09.936305"], ["updated_at", "2019-04-17 11:21:09.936305"]]
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for ::1 at 2019-04-17 21:21:11 +1000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 849ms (Views: 822.5ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/thomashexton/.rvm/rubies/ruby-2.6.2/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Norman Lindsay"], ["nationality", "Australian"], ["dob", "1879-02-22"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/3/32/Norman_Lindsay_1931.jpg"], ["created_at", "2019-04-17 11:21:19.662542"], ["updated_at", "2019-04-17 11:21:19.662542"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mArtist Create (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Russell Drysdale"], ["nationality", "Australian"], ["dob", "1912-02-07"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/c/ca/Russell_Drysdale_Max_Dupain_1945.jpg"], ["created_at", "2019-04-17 11:21:19.667302"], ["updated_at", "2019-04-17 11:21:19.667302"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:6
+  [1m[36mArtist Create (0.7ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "James Gleeson"], ["nationality", "Australian"], ["dob", "1915-11-21"], ["period", "20th century"], ["image", "https://media.artgallery.nsw.gov.au/uploads/artists/James_Gleeson_nla.jpg"], ["created_at", "2019-04-17 11:21:19.671316"], ["updated_at", "2019-04-17 11:21:19.671316"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sidney Nolan"], ["nationality", "Australian"], ["dob", "1917-04-22"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/e/ef/Portrait_of_Sidney_Nolan.jpg"], ["created_at", "2019-04-17 11:21:19.676003"], ["updated_at", "2019-04-17 11:21:19.676003"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mArtist Create (0.9ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arthur Boyd"], ["nationality", "Australian"], ["dob", "1920-07-24"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/en/9/98/Arthur_Boyd.jpg"], ["created_at", "2019-04-17 11:21:19.680237"], ["updated_at", "2019-04-17 11:21:19.680237"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mArtist Create (0.7ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jeffrey Smart"], ["nationality", "Australian"], ["dob", "1921-07-26"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/en/b/b0/Australian_artist_Jeffrey_Smart.jpg"], ["created_at", "2019-04-17 11:21:19.686789"], ["updated_at", "2019-04-17 11:21:19.686789"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brett Whiteley"], ["nationality", "Australian"], ["dob", "1939-04-07"], ["period", "20th century"], ["image", "https://www.portrait.gov.au/files/b/9/4/f/i9331.jpg"], ["created_at", "2019-04-17 11:21:19.693233"], ["updated_at", "2019-04-17 11:21:19.693233"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mWork Create (0.5ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Thieves Kitchen"], ["year", "1929"], ["medium", "etching"], ["style", "Romantic"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=29145"], ["created_at", "2019-04-17 11:21:19.830400"], ["updated_at", "2019-04-17 11:21:19.830400"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWork Create (0.9ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Rabbiters"], ["year", "1947"], ["medium", "oil on canvas"], ["style", "Sun-burnt dinge"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=5520"], ["created_at", "2019-04-17 11:21:19.834716"], ["updated_at", "2019-04-17 11:21:19.834716"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWork Create (0.4ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Darkening Stage"], ["year", "1991"], ["medium", "oil on canvas"], ["style", "Surrealist"], ["image", "https://content.ngv.vic.gov.au/col-images/api/EPUB001055/1280"], ["created_at", "2019-04-17 11:21:19.845050"], ["updated_at", "2019-04-17 11:21:19.845050"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWork Create (0.6ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Carcass"], ["year", "1953"], ["medium", "oil and enamel paint on composition board"], ["style", "Sun-burnt splendour"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=57510"], ["created_at", "2019-04-17 11:21:19.854274"], ["updated_at", "2019-04-17 11:21:19.854274"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWork Create (0.5ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Bride Running Away"], ["year", "1957"], ["medium", "oil and tempera on composition board"], ["style", "Sun-burnt primitivism"], ["image", "http://www.abc.net.au/news/image/4197918-3x2-940x627.jpg"], ["created_at", "2019-04-17 11:21:19.862184"], ["updated_at", "2019-04-17 11:21:19.862184"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mWork Create (0.6ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Portrait of Clive James"], ["year", "1991 - 1992"], ["medium", "oil on canvas"], ["style", "Modernist"], ["image", "https://media.artgallery.nsw.gov.au/thumbnails/collection_images/2/276.1992%23%23S.jpg.505x464_q85.jpg"], ["created_at", "2019-04-17 11:21:19.867420"], ["updated_at", "2019-04-17 11:21:19.867420"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mWork Create (0.4ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Naked Studio"], ["year", "1981"], ["medium", "1981"], ["style", "Impressionist"], ["image", "https://mona.net.au//media/37522/brett-whiteley-the-naked-studio-mona-01.jpg"], ["created_at", "2019-04-17 11:21:19.877049"], ["updated_at", "2019-04-17 11:21:19.877049"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+Started GET "/" for ::1 at 2019-04-17 21:21:21 +1000
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/works" for ::1 at 2019-04-17 21:21:27 +1000
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (99.6ms)
+Completed 200 OK in 192ms (Views: 179.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-17 21:21:31 +1000
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-17 21:22:02 +1000
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/info" for ::1 at 2019-04-17 21:22:08 +1000
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:1234/rails/info/routes
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-04-17 21:22:08 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/railties-5.2.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (15.0ms)
+  Rendered /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (36.1ms)
+  Rendered /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/railties-5.2.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (61.9ms)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-04-17 21:57:48 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/railties-5.2.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (6.5ms)
+  Rendered /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/thomashexton/.rvm/gems/ruby-2.6.2/gems/railties-5.2.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-17 22:05:15 +1000
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
