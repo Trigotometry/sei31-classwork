@@ -68,7 +68,7 @@ const allergens = {
 		let allergies = [];
 
 		for ( let i = 0; i < keys.length; i += 1 ) {
-			const keys = keys[ i ];
+			const key = keys[ i ];
 			if (score >= key) {
 				allergies.push(this.scorecard[key]);
 			}
