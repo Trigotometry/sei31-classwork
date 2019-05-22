@@ -1,0 +1,30 @@
+* {
+	 box-sizing: border-box;
+}
+
+.swatch {
+	display: inline-block;
+	width: 10%;
+	height: 5em;
+	border: 1px solid black;
+}
+
+.swatch.selected {
+	box-shadow: 0 0 20px rgba( 0, 0, 0, 0.75 );
+}
+
+.z {
+	z-index: 5;
+}
+
+.pixel {
+	float: left;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	border: 1px solid black;
+}
+
+input:not([type=checkbox]):not([type=radio]), select {
+	display: inline-block;
+}
