@@ -1,0 +1,11 @@
+<h1>CORS Proxy</h1>
+
+<script>
+	$.ajax("http://localhost:3000/fetch?url=http://www.smh.com.au")
+		.done( ( response ) => {
+			console.log( response.data );
+		} )
+		.fail( ( error ) => {
+			console.warn( error );
+		} )
+</script>

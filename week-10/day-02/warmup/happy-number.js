@@ -71,12 +71,12 @@ const happy = function( num, totalHappy, arr = [] ) {
 			return happy( num + 1, totalHappy, arr );
 		} else {
 			//// If no, repeat this multi-digit evaluation process in Step 1 until the result is 1.
-			return happy( totalPaired, totalHappy, arr );
+			return happy( num + 1, totalHappy, arr );
 		}
 	}
 }
 
-happy( 1, 10 )
+happy( 10, 10 )
 
 // Step 1
 //// First, see if our number has more than one digit.
