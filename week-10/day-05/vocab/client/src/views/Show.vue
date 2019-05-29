@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<h1>Show Word</h1>
+
 		<div class="ui labeled input fluid">
 			<div class="ui label">
 				<i class="germany flag"></i> German
@@ -16,7 +17,9 @@
 		</div>
 
 		<div class="actions">
-			<router-link :to="{ name: 'edit', params: { id: this.$route.params.id } }">Edit Word</router-link>
+			<router-link :to="{ name: 'edit', params: { id: this.$route.params.id }}">
+				Edit Word
+			</router-link>
 		</div>
 	</div>
 </template>
@@ -32,7 +35,7 @@ export default {
 		};
 	},
 	async mounted() {
-		this.word = await api.getWord( this.$route.params.is );
+		this.word = await api.getWord( this.$route.params.id );
 	}
 };
 </script>

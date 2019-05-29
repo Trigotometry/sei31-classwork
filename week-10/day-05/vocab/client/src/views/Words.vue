@@ -1,42 +1,49 @@
 <template>
-<div class="">
-	<h1>Words</h1>
-	<table id="words" class="ui celled compact table">
-		<thead>
-			<tr>
-				<th>English</th>
-				<th>German</th>
-				<th colspan="3"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr v-for="( word, i ) in words" :key="i">
-				<td>{{ word.english }}</td>
-				<td>{{ word.german }}</td>
-				<td width="75" class="center aligned">
-					<router-link :to="{ name: 'show' }">Show</router-link>
-				</td>
-				<td width="75" class="center aligned">Edit</td>
-				<td width="75" class="center aligned">Destroy</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+	<div>
+		<h1>Show Word</h1>
+
+		<div class="ui labeled input fluid">
+			<div class="ui label">
+				<i class="germany flag"></i> German
+			</div>
+			<input type="text" readonly :value="word.german" />
+		</div>
+
+		<div class="ui labeled input fluid">
+			<div class="ui label">
+				<i class="united kingdom flag"></i> English
+			</div>
+			<input type="text" readonly :value="word.english" />
+		</div>
+
+		<div class="actions">
+			<router-link :to="{ name: 'edit', params: { id: this.$route.params.id }}">
+				Edit Word
+			</router-link>
+		</div>
+	</div>
 </template>
 
 <script>
 import { api } from '../helpers/helpers';
 
 export default {
-	name: 'words',
+	name: 'show',
 	data() {
 		return {
-			words: []
-		}
+			word: ''
+		};
 	},
-	// Vue lifecycle:
 	async mounted() {
-		this.words = await api.getWords();
+		this.word = await api.getWord( this.$route.params.id );
 	}
-}
+};
 </script>
+
+<style scoped>
+.actions a {
+	display: block;
+	text-decoration: underline;
+	margin: 20px 10px;
+}
+</style>
