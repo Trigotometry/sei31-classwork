@@ -1,0 +1,22 @@
+body {
+	margin: 0;
+}
+
+.container{
+	margin: 0 auto;
+}
+
+.content {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	font-family: Helvetica;
+	letter-spacing: 1px;
+	font-size: 1.5em;
+	color: #fff;
+ 	padding: 20px;
+	background-color: rgba( 200, 200, 200, 0.5 );
+	width: 50%;
+	matgin 0 auto;
+}
