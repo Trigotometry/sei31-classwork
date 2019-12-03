@@ -1,4 +1,4 @@
-require_relative '../bank.rb'
+require 'bank.rb'
 
 describe Bank do
 	let(:bank) { Bank.new 'TDD Bank' }

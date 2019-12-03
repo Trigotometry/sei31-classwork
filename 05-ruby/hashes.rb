@@ -5,7 +5,7 @@ a = ["Anil", "Erik", "Jonathan"]
 puts a[1]
 puts "--" * 40
 a << "Thomas"
-puts a
+p a
 
 
 puts "----" * 20
@@ -32,7 +32,10 @@ puts h
 puts "----" * 20
 
 
-is = {true => "It's true!", false => "It's false"}
+is = {
+	true => "It's true!",
+	false => "It's false"
+}
 p is[2 + 2 == 4]
 p is["Erik" == "Jonathan"]
 p is[9 > 10]

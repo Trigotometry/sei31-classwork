@@ -1,0 +1,9 @@
+<h2>nmap results: random IPs with open web servers</h2>
+
+<h3><%= @hosts.count %> open web servers detected.</h3>
+
+<% @hosts.each do |h| %>
+	<p>
+		<a href="http://<%= h %>" target="_blank"><%= h %></a>
+	</p>
+<% end %>
